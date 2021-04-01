@@ -1,3 +1,10 @@
+const dotenv = require('dotenv').config();
+
+if(dotenv.error){
+    console.log(dotenv.error);
+    process.exit(0);
+}
+
 const Hapi = require('@hapi/hapi');
 const _ = require('lodash');
 const faker = require('faker/locale/es_MX');
@@ -28,8 +35,8 @@ function generateDB(){
 async function init(){
     try {
         const serverInfo = {
-            port:3000,
-            host:'localhost',
+            port:process.env.PORT,
+            host:process.env.HOST,
             routes: {
                 cors: {
                     origin: ['*']           
@@ -41,7 +48,7 @@ async function init(){
         server.route(router);
     
         await server.start();
-        console.log('server running on port 3000');
+        console.log('server running on port ',process.env.PORT);
     } catch (error) {
         console.log("error->",error);
     }

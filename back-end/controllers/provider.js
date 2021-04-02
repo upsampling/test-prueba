@@ -31,7 +31,7 @@ const schema = {
         maxLength: 10
       }
     },
-    required : ["name","email","phone","address","debt"],
+    required : ["name","email","phone","address"],
     additionalProperties:false
   }
 

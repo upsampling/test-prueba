@@ -1,6 +1,9 @@
 async function GetSettings(request,h){
     try {
-        return {apiVersion:'1.0.3'};
+        return {
+            version:'1.0.3',
+            message:'Hola Candidato 01'
+        };
     } catch (error) {
         console.log(error);
     }

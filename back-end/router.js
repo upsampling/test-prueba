@@ -5,7 +5,7 @@ module.exports =
     [
         {
             method: 'GET',
-            path: '/',
+            path: '/settings',
             handler: GetSettings
         },
         {

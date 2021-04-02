@@ -11,7 +11,7 @@ function DataBase() {
         fs.writeFileSync('db.json', data);
         return 'item saved';
     }
-    this.read = (filter, page = 0, numberItems = 5 ) => {
+    this.read = (filter, page = 0, numberItems = 6 ) => {
         const switchConfition = filter ? Object.keys(filter)[0] : '';
         let response = [];
         switch (switchConfition) {
@@ -63,30 +63,7 @@ function DataBase() {
     }
 }
 
-/*(()=>{
-    const db1 = new DataBase();
-    const rp = db1.delete('19d50f7a-6706-4d7a-bfc3-30b8c59da683');
-    console.log(rp);
-})()*/
-/*(()=>{
-    const db1 = new DataBase();
-    const rp = db1.read();
-    console.log(rp);
-    const rp1 = db1.read({id:'7a3b81ce-9cd8-4b02-8976-627a650eb572'});
-    console.log(rp1);
-    const rp2 = db1.read({name:'Ornelas S.A.'});
-    console.log(rp2)
-})()*/
-/*(()=>{
-    const db1 =  new DataBase();
-    const resp = db1.create({"name":"Comercializadora SA de CV","email":"LuRE1@nearbpo.com","phone":"568 547 796","address":"671 Hugo Parcela","debt":"0","status":false})
-    console.log(resp);
-})()*/
-/*(()=>{
-    const db1 = new DataBase();
-    const rp = db1.update('617faf88-4c6a-41e2-9b9c-49f055efe35a',{email:'perltaborrego@yopmail.com',phone:'553366882'})
-    console.log(rp);
-})()*/
+
 
 
 module.exports = { DataBase };

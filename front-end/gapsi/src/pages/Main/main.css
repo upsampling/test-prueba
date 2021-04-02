@@ -1,8 +1,28 @@
-#container{
+#container-main{
     width: 100vw;
     height: 100vh;
-    background: blueviolet;
+    background: #adadad94;
     position: absolute;
     left: 0;
     top:0;
+}
+#subcontainer{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+}
+.card-content{
+    padding-top: 20px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+.img-card{
+    margin-left: 6%;
+    margin-right: auto;
+    width: 200px;
+    margin-bottom: 30px;
+}
+.label-card{
+    text-align: center;
 }

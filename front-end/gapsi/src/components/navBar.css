@@ -1,0 +1,29 @@
+.label-title{
+    margin-top: 28px;
+    font-size: 29px;
+    font-weight: 700;
+    color: white;
+}
+.container-title{
+    padding-top: 10px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(19, 18, 18);
+    padding-bottom: 20px;
+}
+.subcontainer-center-title{
+    width: 40%;
+    text-align: center;
+}
+.subcontainer-lateral-title{
+    width: 30%;
+}
+
+.img-title{
+    width: 150px;
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}

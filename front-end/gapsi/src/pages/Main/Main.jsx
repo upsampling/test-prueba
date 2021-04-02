@@ -21,18 +21,17 @@ const Main = () => {
   
   const onClickMove = ()=>{
     console.log('move');
-    history.go('/home')
+    history.push('/home')
   }
 
   useEffect(()=>{
     async function fillData(){
         try {
             await setTimeoutAsync(1200)
-            let complaint = await Axios(settingsGet());
-            complaint = complaint.data;
-            setData(complaint)
-            setRunning(false)
-            console.log(complaint)
+            let result = await Axios(settingsGet());
+            result = result.data;
+            setData(result);
+            setRunning(false);
         } catch (error) {
             console.log("error->",error.response.data);
         }
@@ -43,7 +42,7 @@ const Main = () => {
   return (
     <div id="container-main">
       <NavBar />
-      <div id="subcontainer">
+      <div id="sub-container">
         <Card>
           <Card.Content>
             <Card.Header textAlign='center' >{copy}</Card.Header>

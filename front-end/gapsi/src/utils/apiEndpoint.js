@@ -1,10 +1,41 @@
 const baseUrl = 'http://localhost:4000';
 
-function settingsGet(){
+function settingsGet() {
     return {
         method: 'GET',
-        url: baseUrl+'/settings', 
-        headers:{
+        url: baseUrl + '/settings',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }
+}
+function providerGet(page) {
+    return {
+        method: 'GET',
+        url: baseUrl + '/provider?page=' + page,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }
+}
+function providerDelete(id) {
+    return {
+        method: 'DELETE',
+        url: baseUrl + '/provider/' + id,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }
+}
+function providerCreate(data) {
+    return {
+        method: 'POST',
+        url: 'http://localhost:4000/provider',
+        data,
+        headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         }
@@ -12,5 +43,6 @@ function settingsGet(){
 }
 
 module.exports = {
-    settingsGet
+    settingsGet, providerGet,
+    providerDelete,providerCreate
 }

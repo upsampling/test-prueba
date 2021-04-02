@@ -1,0 +1,19 @@
+#subcontainer-home{
+    width: 100vw;
+}
+.segment{
+    width: 100%;
+    height: 600px;
+}
+.card-table{
+    width: 85%;
+    height: 90%;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: green;
+}
+.ui.table{
+    height: 90%;
+}
+

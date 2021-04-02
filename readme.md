@@ -3,7 +3,10 @@ _Documentación en Postman_
 ```
 https://www.getpostman.com/collections/5c587e555fd2144c9b1a
 ```
-
+_Repo Github_
+```
+https://github.com/Erick95s/gapsi
+```
 ### Instalación 
 _Para instalar dependencias ejecutar lo siguiente en la ruta principal ./back-end y en la ruta ./front-end/gapsi:_
 ```

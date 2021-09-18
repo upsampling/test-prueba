@@ -10,6 +10,19 @@ function settingsGet() {
         }
     }
 }
+
+function settingsPost2(data) {
+    return {
+        method: 'POST',
+        url: baseUrl + '/settings2',
+        data,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+    }
+}
+
 function providerGet(page) {
     return {
         method: 'GET',
@@ -43,6 +56,6 @@ function providerCreate(data) {
 }
 
 module.exports = {
-    settingsGet, providerGet,
+    settingsGet, settingsPost2, providerGet,
     providerDelete,providerCreate
 }

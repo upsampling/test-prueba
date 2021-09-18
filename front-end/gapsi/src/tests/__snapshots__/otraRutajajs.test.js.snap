@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <OtraRutajajs /> Se debe de mostrar <OtraRutajajs /> correctamente 1`] = `
+<div
+  id="container-main"
+>
+  <NavBar />
+  <div
+    id="sub-container"
+  >
+    <Card>
+      <CardContent>
+        <CardHeader
+          className="card-title"
+          textAlign="center"
+        >
+          Bienvenido a la otra página que se creó.
+        </CardHeader>
+        <CardMeta>
+          <Segment>
+            <Dimmer
+              active={true}
+            >
+              <Loader>
+                Cargando...
+              </Loader>
+            </Dimmer>
+            <div
+              className="card-content"
+            >
+              <img
+                alt=""
+                className="img-card"
+                src="user2.png"
+              />
+              <p
+                className="label-card"
+              />
+              <span
+                className="date label-card"
+              >
+                Version : 
+              </span>
+            </div>
+          </Segment>
+        </CardMeta>
+        <CardDescription>
+          <Button
+            as="button"
+            content="Ingresa..."
+            onClick={[Function]}
+          />
+        </CardDescription>
+      </CardContent>
+    </Card>
+  </div>
+</div>
+`;

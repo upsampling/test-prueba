@@ -24,18 +24,20 @@ const Main = () => {
     history.push('/home')
   }
 
-  useEffect(()=>{
-    async function fillData(){
-        try {
-            await setTimeoutAsync(1200)
-            let result = await Axios(settingsGet());
-            result = result.data;
-            setData(result);
-            setRunning(false);
-        } catch (error) {
-            console.log("error->",error.response.data);
-        }
-    }       
+  const fillData = async ()=>{
+      try {
+        let result = await Axios(settingsGet());
+        result = result.data;
+        await setTimeoutAsync(1200)
+        setData(result);
+        setRunning(false);
+      } catch (error) {
+
+          console.log("error->",error.response.data);
+      }
+  }
+
+  useEffect(()=>{      
     fillData();
 },[]);
 

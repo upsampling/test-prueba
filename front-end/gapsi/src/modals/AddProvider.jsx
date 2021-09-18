@@ -13,7 +13,7 @@ const AddProvider = ({ onclose, display }) => {
             console.log('click')
             const form = Object.keys(provider);
 
-            if(form.length != 4){
+            if(form.length !== 4){
                 setMessage('Campos faltantes');
                 throw 'faltantes';
             }
@@ -26,6 +26,7 @@ const AddProvider = ({ onclose, display }) => {
                 }
             });
             setMessage('Cargando...');
+            console.log("asdf", provider)
             let result = await Axios(providerCreate(provider));
             result = result.data;
             console.log(result)

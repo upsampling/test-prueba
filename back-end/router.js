@@ -1,4 +1,4 @@
-const { GetSettings } = require('./controllers/settings');
+const { GetSettings, PostSettings2 } = require('./controllers/settings');
 const { GetProvider, PutProvider, PostProvider, DeleteProvider } = require('./controllers/provider');
 
 module.exports =
@@ -7,6 +7,11 @@ module.exports =
             method: 'GET',
             path: '/settings',
             handler: GetSettings
+        },
+        {
+            method: 'POST',
+            path: '/settings2',
+            handler: PostSettings2
         },
         {
             method: 'GET',
